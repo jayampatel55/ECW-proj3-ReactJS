@@ -1,0 +1,284 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+}
+.app {
+  display: flex;
+}
+.sidebar {
+  width: 80px;
+  background-color: #1a3553;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+.sidebar a {
+  display: block;
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 10px;
+  color: white;
+  text-decoration: none;
+}
+.sidebar a img {
+  width: 25px;
+  height: 25px;
+}
+.sidebar a.active, .sidebar a:hover {
+  background-color: #1A73E8;
+  border-radius: 8px;
+}
+.top-nav {
+  width: 1350px;
+  height: calc(12% - 14px);
+  background-color: #1a3553;
+  display: flex;
+  align-items: center;
+  /*padding-top: 100px;*/
+  padding: 0 30px;
+  color: white;
+  /*box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);*/
+  justify-content: space-between;
+}
+.top-nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+.top-nav li {
+  margin: 0 10px;
+}
+.top-nav a {
+  color: white;
+  text-decoration: none;
+  padding: 40px;
+}
+.main-content {
+  width: calc(100% - 60px);
+  padding: 20px;
+  background-color: #F4F4F4;
+  height: 100vh;
+  /*overflow-y: auto;*/
+
+}
+.top-nav a.active, .main-content a:hover {
+  background-color: #1A73E8;
+  border-radius: 8px;
+  height: 10vh;
+}
+.dashboard-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.content-box {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+.app-container {
+  text-align: center;
+  margin-top: 100px;
+
+}
+.open-popup-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1300px;
+  height: 600px;
+  background-color: #f5f5f5;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  font-family: Arial, sans-serif;
+  z-index: 1000;
+}
+.popup-header {
+  padding: 10px;
+  background-color: #0560c5;
+  color: white;
+  /*border-radius: 10px 10px 0 0;*/
+}
+.close-btn{
+
+  background: none;
+  border: none;
+  color: rgb(137, 175, 218);
+  font-size: 20px;
+  float: right;
+  cursor: pointer;
+}
+.popup-content {
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.popup-content label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+.popup-content select,
+.popup-content input[type="checkbox"] {
+  margin-right: 10px;
+  width: calc(10% - 10px);
+  padding: 8px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+.search-btn {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+.employee-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.popup-content {
+  padding: 20px;
+  max-height: 500px; /* Adjust the height to your needs */
+  overflow-y: auto; /* Adds vertical scroll */
+}
+.employee-cards-container {
+  display: flex
+}
+/* Input and Button Styles within the Popup */
+.popup-content input[type="text"],
+.popup-content input[type="date"] {
+  padding: 5px;
+  margin-right: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  width: 120px;
+}
+.popup-content select {
+  padding: 5px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+.popup-content button {
+  padding: 5px 10px;
+  background-color: #007acc;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.popup-content button:hover {
+  background-color: #005f99;
+}
+/* Flexbox for Aligning Form Elements */
+.popup-form {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+/* Additional Styling for the Dropdown and Inputs */
+.popup-content .popup-form label {
+  margin-right: 5px;
+  font-weight: bold;
+}
+/* Optional: Style Adjustments for Different Popups (Task, Client) */
+.popup.task-lookup {
+  /* Additional styles specific to task popup if needed */
+}
+.popup.client-lookup {
+  /* Additional styles specific to client popup if needed */
+}
+/* Jellybean container for the top nav */
+.jellybean-container {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 20px; /* Adjust spacing as needed */
+}
+
+/* Individual Jellybean */
+.jellybean {
+  float: left;
+  margin: 0;
+  padding: 0;
+  width: 50px;
+  height: 26px;
+  color: #fff;
+  text-align: center;
+  float: left;
+  padding: 0;
+  margin: 5px 0 0 0;
+  border-radius: 109px 109px 109px 109px;
+  -moz-border-radius: 109px 109px 109px 109px;
+  -webkit-border-radius: 109px 109px 109px 109px;
+  font-weight: 600;
+  line-height: 23px;
+  background: #2a405d;
+  border: 1px solid #899ead;
+}
+
+/* Adjust color for each state */
+.jellybean.sm {
+  background-color: #1a3553; /* Example color, adjust accordingly */
+  color: #ffffff; /* Text color */
+}
+
+.jellybean.ps {
+  background-color: #1a3553; /* Example color, adjust accordingly */
+  color: #ffffff; /* Text color */
+}
+
+.jellybean.uo {
+  background-color: #1a3553; /* Example color, adjust accordingly */
+  color: #ffffff; /* Text color */
+}
+
+/* Example classes for other types */
+.jellybean.ri {
+  background-color: #1a3553;
+  color: #ffffff;
+}
+
+.jellybean.to {
+  background-color: #1a3553;
+  color: #ffffff;
+}
+
+.jellybean.no {
+  background-color: #1a3553;
+  color: #ffffff;
+}
+
+.jellybean.ao {
+  background-color: #00274d;
+  color: #ffffff;
+}
+
+.jellybean.default {
+  background-color: #d0d0d0; /* Light grey for default/unlabeled state */
+  color: black; /* Dark text for default state */
+}
